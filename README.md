@@ -23,3 +23,15 @@ enabling proactive retention strategies.
 - ROI on retention program: **340%**
 
 ## 🏗️ Architecture
+
+┌─────────────┐    ┌──────────────────┐    ┌─────────────┐    ┌──────────────┐    ┌─────────────┐    ┌─────────────┐
+│   Raw Data  │───→│ Feature Engineer │───→│ Preprocess  │───→│    Train     │───→│  Evaluate   │───→│   Deploy    │
+│  (900 rows) │    │   (14 features)  │    │  & Scale    │    │   4 Models   │    │  & Tune     │    │  Predictor  │
+└─────────────┘    └──────────────────┘    └─────────────┘    └──────────────┘    └─────────────┘    └─────────────┘
+│                       │                   │                  │                │
+▼                       ▼                   ▼                  ▼                ▼
+• Date parsing            • StandardScaler    • Random Forest   • ROC/PR curves   • joblib model
+• State extraction        • OneHotEncoder     • Gradient Boost  • Threshold       • Batch API
+• Purchase/Year ratio     • Missing value     • Logistic Reg    • optimization    • Risk segments
+• Company frequency       •   imputation      • Decision Tree   • Business impact • (Low/Med/High)
+• Age/Value segments                          • Voting Ensemble
