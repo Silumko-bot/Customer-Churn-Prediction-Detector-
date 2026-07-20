@@ -79,4 +79,28 @@ enabling proactive retention strategies.
 ## 📁 Repository Structure
 
 
+customer-churn-prediction/
+├── README.md
+├── requirements.txt
+├── config.py
+├── data/
+│   └── customer_churn.csv
+├── notebooks/
+│   └── 01_eda_and_modeling.ipynb
+├── src/
+│   ├── init.py
+│   ├── data_loader.py
+│   ├── feature_engineering.py
+│   ├── preprocessing.py
+│   ├── models.py
+│   ├── train.py
+│   ├── evaluate.py
+│   └── predict.py
+├── models/
+│   └── best_model.pkl
+├── reports/
+│   └── figures/
+└── tests/
+└── test_pipeline.py
+
 
