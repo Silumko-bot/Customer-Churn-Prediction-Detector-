@@ -104,3 +104,19 @@ customer-churn-prediction/
 └── test_pipeline.py
 
 
+
+---
+
+## 🏃 Quick Start
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Run full pipeline
+python main.py
+
+# Make predictions on new data
+python -m src.predict --input data/new_customers.csv --output predictions.csv
+
+
